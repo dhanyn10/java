@@ -14,5 +14,19 @@
 			<input type="texy" name="address"/><br/>
 			<input type="submit" value="submit">
 		</form>
+		<form action="/update">
+			<label>ID</label>
+			<input type="text" name="id"/><br/>
+			<label>name</label>
+			<input type="text" name="name"/><br/>
+			<label>address</label>
+			<input type="text" name="address"/><br/>
+			<input type="submit" value="update"/>
+		</form>
+		<form action="/delete">
+			<label>ID to delete</label>
+			<input type="text" name="id"/><br/>
+			<input type="submit" value="delete"/>
+		</form>
 	</body>
 </html>
