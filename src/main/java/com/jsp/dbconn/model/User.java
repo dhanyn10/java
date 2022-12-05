@@ -9,7 +9,7 @@ import jakarta.persistence.Id;
 public class User {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String name;
 	private String address;
@@ -20,11 +20,12 @@ public class User {
 		this.address = address;
 	}
 	
+	public User() {
+		super();
+	}
+
 	public int getId() {
 		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
 	}
 	public String getName() {
 		return name;

@@ -1,9 +1,12 @@
 package com.jsp.dbconn.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.jsp.dbconn.dao.UserRepository;
 import com.jsp.dbconn.model.User;
@@ -23,5 +26,16 @@ public class HomeController {
 	public String save(User user) {
 		repo.save(user);
 		return "success";
+	}
+	
+	@RequestMapping("/show")
+	public ModelAndView showData() {
+		ModelAndView mv = new ModelAndView();
+		
+		List<User> datalist = repo.findAll();
+		
+		mv.addObject("data", datalist);
+		mv.setViewName("mydata");
+		return mv;
 	}
 }
