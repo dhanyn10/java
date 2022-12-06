@@ -16,7 +16,14 @@ on:
 
 jobs:
   build:
-
+    services:
+      mariadb:
+        image: mariadb:10.4
+        env:
+          MYSQL_ALLOW_EMPTY_PASSWORD: true
+          MYSQL_DATABASE: springdb
+        ports:
+          - 3306:3306
     runs-on: ubuntu-latest
 
     steps:
