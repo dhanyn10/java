@@ -4,9 +4,10 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Insert title here</title>
+		<title>Home</title>
 	</head>
 	<body>
-		Home System Security	
+		Home System Security
+		<a href="logout">logout</a>
 	</body>
 </html>
