@@ -21,7 +21,7 @@ jobs:
         image: mariadb:10.4
         env:
           MYSQL_ALLOW_EMPTY_PASSWORD: true
-          MYSQL_DATABASE: springdb
+          MYSQL_DATABASE: springdb_sec
         ports:
           - 3306:3306
     runs-on: ubuntu-latest
