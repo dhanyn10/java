@@ -11,7 +11,7 @@ import javaloginsecurity.loginsystem.dao.UserRepository;
 import javaloginsecurity.loginsystem.model.User;
 
 @Service
-public class UserDataService implements UserDetailsService{
+public class UserDetailService implements UserDetailsService{
 
 	@Autowired
 	private UserRepository repo;
